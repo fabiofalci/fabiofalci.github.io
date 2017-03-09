@@ -42,7 +42,7 @@
     <div class="page-content">
       <div class="wrapper">
         <div style="margin-bottom: 1em">Your access token is:</div>
-        <div id="show-access-token">
+        <input id="show-access-token" type="text" readonly="readonly" style="width:300px" onclick="this.focus();this.select();">
     </div>
 
 <script>
@@ -56,7 +56,7 @@
     var accessToken = getParameterByName('access_token');
     var tokenType = getParameterByName('token_type');
     var expiresIn = getParameterByName('expires_in');
-    document.getElementById("show-access-token").innerHTML =
+    document.getElementById("show-access-token").value =
             "access_token:" + accessToken + " token_type:" + tokenType + " expiresIn:" + expiresIn;
 
 </script>
